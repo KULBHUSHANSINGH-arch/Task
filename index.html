@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Selection</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class=" main-container">
+
+        <section class="heading-section">
+            <span class="heading-text">YAY! It's BOGO</span>
+        </section>
+        <section class="items-container">
+            <div class="item" onclick="toggleOptions(this)">
+                <div class="item-header">
+                    <div class="left">
+                        <span class="custom-radio" onclick="toggleSelection(this)"></span>
+                        <div class="description">
+                            <h3>Unit 1 <span>10% Off </span></h3>
+                            <p>Standard Price</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="price-first">$10.00 USD</p>
+                        <p class="price-off">$24.00 USD</p>
+                    </div>
+                </div>
+
+                <div class="options">
+                    <div class="option-row">
+                        <span class="option-label">#1</span>
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                        <select>
+                            <option>Colour</option>
+                        </select>
+                    </div>
+                    <div class="option-row">
+                        <span class="option-label">#2</span>
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                        <select>
+                            <option>Colour</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+        <section class="add-to-cart-button-wrapper">
+
+        </section>
+
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

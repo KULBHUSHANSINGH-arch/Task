@@ -1,0 +1,216 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+/* .inter-<uniquifier> {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.main-container{
+    width: 35%;
+    height: 100vh;
+    background-color: #fff;
+    padding: 30px 20px;
+}
+
+/* heading text styling------- */
+.heading-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.heading-section::before,
+.heading-section::after {
+    content: "";
+    flex-grow: 1;
+    height: 0.9px;
+    background-color: #c8c8c8;
+}
+.heading-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff6b82;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+
+
+/* items conatiner */
+.items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
+    border: 2px solid #dadada;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Header Styling */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Left Section */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dadada;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.custom-radio::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.custom-radio.selected {
+    border-color: #FF6B82;
+}
+
+.custom-radio.selected::before {
+    background-color: #FF6B82;
+    opacity: 1;
+}
+
+
+/* Description */
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.description h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
+}
+
+.description span {
+    background-color: #FF6B82;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Right Section */
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.right .price-first {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 14.46px;
+}
+
+.right p:last-child {
+    text-decoration: line-through;
+    color: #999;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 10px;
+}
+
+/* OPTIONS DROPDOWN STYLING */
+
+
+.option-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Dropdown Styling */
+select {
+    padding: 6px 10px;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+.options {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.item.active {
+    border-color: #FF6B82;
+}
+
+.item.active .options {
+    display: flex;
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1;
+}
+
