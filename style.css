@@ -382,6 +382,10 @@ select:focus {
     color: #00000066;
 }
 
-@media screen and (min-width: 1025px) {
-    
-}
+@media (max-width: 767px) {
+    .main-container{
+        width: 100%;
+       
+    }
+  }
+  
