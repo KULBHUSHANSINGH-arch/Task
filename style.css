@@ -1,15 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
-
-/* .inter-<uniquifier> {
-    font-family: "Inter", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  } */
-
 *{
     margin: 0;
     padding: 0;
@@ -26,12 +17,12 @@ body{
 
 .main-container{
     width: 35%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff;
     padding: 30px 20px;
 }
 
-/* heading text styling------- */
+/*------------- heading text styling ---------- */
 .heading-section {
     display: flex;
     align-items: center;
@@ -39,6 +30,7 @@ body{
     width: 100%;
     margin-bottom: 20px;
 }
+
 .heading-section::before,
 .heading-section::after {
     content: "";
@@ -46,6 +38,7 @@ body{
     height: 0.9px;
     background-color: #c8c8c8;
 }
+
 .heading-text {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -55,12 +48,10 @@ body{
     white-space: nowrap;
 }
 
-
-
-/* items conatiner */
+/* ------------- items conatiner -------------*/
 .items-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     gap: 15px;
 }
 
@@ -72,16 +63,16 @@ body{
     cursor: pointer;
 }
 
-/* Header Styling */
+/*------------- Header Styling -------------*/
 .item-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
     transition: background 0.3s ease-in-out;
+    position: relative;
 }
 
-/* Left Section */
 .left {
     display: flex;
     align-items: center;
@@ -120,8 +111,7 @@ body{
     opacity: 1;
 }
 
-
-/* Description */
+/*------------- Description -------------*/
 .description {
     display: flex;
     flex-direction: column;
@@ -147,7 +137,7 @@ body{
     margin-left: 10px;
 }
 
-/* Right Section */
+/*------------- Right Section -------------*/
 .right {
     display: flex;
     flex-direction: column;
@@ -167,11 +157,43 @@ body{
     font-family: 'Inter';
     font-weight: 400;
     font-size: 10px;
+    margin-right: 23px;
 }
 
-/* OPTIONS DROPDOWN STYLING */
+
+.description p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    color: black; 
+    width: 84px; 
+    height: 15px;
+    top: 121.77px;
+    left: 108.23px;
+}
 
 
+/* ------ Most Popular ------------ */
+.most-popular-badge {
+    width: 119px;
+    height: 26px;
+    background: #FF6B82;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: absolute;
+    top: -19px;
+    right: 10px;
+    margin-right: -15px;
+}
+
+/* ------------- OPTIONS DROPDOWN STYLING -------------*/
 .option-row {
     display: flex;
     align-items: center;
@@ -179,29 +201,74 @@ body{
 }
 
 .option-label {
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
+    font-size: 9.04px;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400; 
+    line-height: 10.94px; 
+    letter-spacing: 0%;
+    color: black;   
+    display: block;  
+    margin-top: 27px;
 }
 
-/* Dropdown Styling */
+/* ------------- Dropdown Styling -------------*/
 select {
+    width: 66px;
     padding: 6px 10px;
     border: 1px solid #dadada;
     border-radius: 4px;
     background-color: white;
     cursor: pointer;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    color: black;
 }
+
+select:hover {
+    border-color: blue;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    width: 76px;
+    padding: 6px 10px;
+    border: 2px solid #dadada;
+    border-radius: 1px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0L5 6L10 0H0Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+/* -------------Hover & Focus (Click) Effect -------------*/
+select:hover,
+select:focus {
+    border-color: blue;    
+    outline: none; 
+}
+
 .options {
     display: none;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     padding: 15px;
     gap: 10px;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
+    /* border: 2px solid green; */
 }
 
 .item.active {
@@ -210,7 +277,111 @@ select {
 
 .item.active .options {
     display: flex;
-    max-height: 200px; /* Adjust as needed */
+    max-height: 200px;
     opacity: 1;
 }
 
+.dropdown-container-1,
+.dropdown-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.dropdown-label {
+    font-size: 9.94px;  
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    color: black;
+    margin-bottom: 4px;
+}
+
+.option-label-2 {
+    font-size: 9.04px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 10.94px;
+    letter-spacing: 0%;
+    color: black;
+    display: block;
+    margin-top: -5px; 
+}
+
+/* ----------------------  Text Data ------------- */
+.Delivery-text-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.text-delivery-row1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FF6B82;
+}
+
+.text-delivery-row2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* --------------------  Last Row --------------- */
+/* Wrapper Section */
+.add-to-cart-button-wrapper {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+/* ------------- Add to Cart Button -------------*/
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #FF6B82;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.33px;
+    height: 9.33px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+}
+
+.button-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+/*------------- Powered by Pumper ------------- */
+.powered-by {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: italic;
+    color: #00000066;
+}
+
+@media screen and (min-width: 1025px) {
+    
+}
